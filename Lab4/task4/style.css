@@ -1,0 +1,65 @@
+/* 1. span у середині .text-background: курсив, жирність, підкреслення */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. span у .text-background, які в div: жовтий фон */
+div .text-background span {
+    background-color: yellow;
+}
+
+/* 3. span у середині інших span: сірий фон, перекреслений */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4. span у span у нумерованому списку: 18px, верхній регістр */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. абзаци першого рівня в section: тінь і відступ */
+section > p {
+    text-shadow: 3px 3px 5px red;
+    text-indent: 50px;
+}
+
+/* 6. ul безпосередньо в li: галочка замість маркера */
+li > ul {
+    list-style: none;
+}
+
+li > ul > li {
+    background: url("check_copy.jpg") no-repeat left center;
+    background-size: 16px 16px;
+    padding-left: 24px;
+}
+
+/* 7. p.text-background першого рівня в div: інтервал між словами */
+div > .text-background {
+    word-spacing: 50px;
+}
+
+/* 8 */
+.bold > p {
+    font-weight: bold;
+}
+
+/* 9 */
+.bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. абзац, що йде відразу після img: коричневий фон */
+img + p {
+    background-color: brown;
+}
+
+/* 11. усі абзаци після section на тому ж рівні: червоний текст */
+section ~ p {
+    color: red;
+}

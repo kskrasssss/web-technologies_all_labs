@@ -1,0 +1,46 @@
+/* універсальний селектор */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* селектор тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* селектори класів */
+.red {
+    color: red;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.shadow {
+    text-shadow: 5px -5px 3px red;
+}
+
+.block1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.block2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
+
+/* селектор ідентифікатора */
+#special {
+    font-style: italic;
+    font-weight: bold;
+}

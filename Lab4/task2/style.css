@@ -1,0 +1,52 @@
+body {
+    font-family: "Times New Roman", serif;
+    text-align: center;
+}
+
+/* селектори тегів */
+h1 {
+    color: red;
+}
+
+h2 {
+    font-style: italic;
+}
+
+p {
+    margin: 4px 0;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    width: 80%;
+    background-color: green;
+}
+
+/* селектори класів */
+.name {
+    font-weight: bold;
+}
+
+.amount {
+    font-size: 16px;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.old {
+    text-decoration: line-through;
+}
+
+.hint {
+    background-color: yellow;
+}
+
+/* селектор ідентифікатора */
+#motto {
+    font-family: monospace;
+    font-style: italic;
+    margin-top: 20px;
+}

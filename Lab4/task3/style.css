@@ -1,0 +1,39 @@
+/* усі посилання фіолетові (селектор тегу) */
+a {
+    color: purple;
+}
+
+/* пункти головного меню зелені (селектор класу) */
+.main {
+    color: green;
+}
+
+/* прибрати маркери у вкладених списках (комбінатор нащадків трьох тегів) */
+ul li ul {
+    list-style-type: none;
+}
+
+/* останній вкладений список: квадрат (селектор класу) */
+.berries {
+    list-style-type: square;
+}
+
+/* другий вкладений список: піктограма (селектор класу) */
+.veg {
+    list-style: none;
+}
+
+.veg li {
+    background: url("check.jpg") no-repeat left center;
+    background-size: 16px 16px;
+    padding-left: 24px;
+}
+/* посилання в останньому списку без підкреслення (комбінатор нащадків класу та тегу) */
+.berries a {
+    text-decoration: none;
+}
+
+/* нумерація всередині блоку «Різне» (селектор тегу) */
+ol {
+    list-style-position: inside;
+}

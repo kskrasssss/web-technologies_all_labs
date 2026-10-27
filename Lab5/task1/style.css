@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+div {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+/* загальні вимоги до списків */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: inside;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+
+/* список 1-го рівня */
+div > ul > li {
+    background-color: rgb(103, 158, 128);
+    background-image: url("../icons/checklist.png");
+    background-position: 10px 5px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+/* список 2-го рівня */
+div > ul > li > ul > li {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    background-position: 5px center;
+    background-size: 30px 30px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+/* span */
+span {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+div > ul > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+div > ul > li > ul > li > span {
+    background-color: rgb(218, 106, 32);
+}
+
+/* іконки другого рівня (підстав свої назви файлів) */
+.route    { background-image: url("../icons/smartphone.png"); }
+.tickets  { background-image: url("../icons/flight.png"); }
+.hotel    { background-image: url("../icons/bed.png"); }
+.car      { background-image: url("../icons/car.png"); }
+.bar      { background-image: url("../icons/bar.png"); }
+.casino   { background-image: url("../icons/casino.png"); }
+.museum   { background-image: url("../icons/museum.png"); }
+.festival { background-image: url("../icons/festival.png"); }

@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- 1. box-sizing ---------- */
+.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #1d4474;
+    background-color: #c4dbf2;
+    margin: 20px;
+}
+
+.content {
+    box-sizing: content-box;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+.border {
+    box-sizing: border-box;
+    /* Загальна ширина: 300px */
+}
+
+/* ---------- 2. overflow ---------- */
+.ov {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    max-height: 80px;
+    border: 2px solid #1d4474;
+    margin: 0 20px 120px 0;
+}
+
+.ov-visible { overflow: visible; }
+.ov-hidden  { overflow: hidden; }
+.ov-scroll  { overflow: scroll; }
+.ov-auto    { overflow: auto; }
+
+/* ---------- 3. display ---------- */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #3f7bbf;
+    text-decoration: none;
+}
+
+/*
+  display: none повністю прибирає елемент із документа: він не відображається
+  і не займає місця, сторінка формується так, ніби його немає. Крім того, він
+  недоступний для скрінрідерів і не отримує фокус.
+  Інші способи приховування відрізняються: visibility: hidden робить елемент
+  невидимим, але він і далі займає своє місце; opacity: 0 теж лишає місце
+  і елемент усе ще можна клікнути.
+*/
+.hidden {
+    display: none;
+}

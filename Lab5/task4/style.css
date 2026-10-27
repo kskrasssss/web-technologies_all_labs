@@ -1,0 +1,44 @@
+div {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 1: діагональні смуги з чіткими межами */
+div:nth-of-type(1) {
+    background: linear-gradient(45deg, #5b9bd5 50%, #2e75b6 50%);
+    background-size: 40px 40px;
+}
+
+/* 2: клітинки з двох градієнтів під прямим кутом */
+div:nth-of-type(2) {
+    color: #1d4474;
+    background-color: #f0f6fc;
+    background-image:
+        linear-gradient(transparent 50%, rgba(46, 117, 182, 0.3) 50%),
+        linear-gradient(90deg, rgba(46, 117, 182, 0.3) 50%, transparent 50%);
+    background-size: 40px 40px;
+}
+
+/* 3: радіальний градієнт */
+div:nth-of-type(3) {
+    background: radial-gradient(circle farthest-corner at 30px 20px,
+        #8db6e2 0%, #3f7bbf 50%, #1d4474 100%);
+}
+
+/* 4: напівпрозорий градієнт поверх кольору */
+div:nth-of-type(4) {
+    background-color: #3f7bbf;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}

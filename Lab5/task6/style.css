@@ -1,0 +1,105 @@
+/* фон сторінки */
+body {
+    background-color: #1b2a41;
+    background-image: url('../img/b.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/*
+  Контейнер. Якщо вікно браузера вужче за 320px, контейнер далі не стискається
+  (min-width: 320px), тому він виходить за межі вікна і з'являється
+  горизонтальна смуга прокрутки.
+*/
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/*
+  Блок «Теги». Для рядкових елементів (inline) width і height не діють:
+  їхній розмір визначається лише вмістом. Ці властивості працюють
+  тільки для блокових, рядково-блочних і замінюваних (img) елементів.
+*/
+.tag {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #c4dbf2;
+}
+
+.skill {
+    display: block;
+    width: 150px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: #1d4474;
+}
+
+/*
+  Блок «Повторення фону».
+  space: зображення не масштабується, їх вміщується ціле число, а зайвий
+  простір рівномірно розподіляється між ними (проміжки).
+  round: зображення масштабуються (розтягуються або стискаються), щоб ціле
+  число копій заповнило область без проміжків.
+*/
+.repeat {
+    box-sizing: border-box;
+    width: 330px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 1px dashed #555;
+    background-image: url('../icons/с.jpg');  /* маленька картинка 60x60 */
+    font-weight: bold;
+}
+
+.rep-x     { background-repeat: repeat-x; }
+.rep-y     { background-repeat: repeat-y; }
+.rep-space { background-repeat: space; }
+.rep-round { background-repeat: round; }
+
+/* Блок «Масштабування» */
+.size {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    border: 2px solid #1d4474;
+    background-image: url('../img/a.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+.size-contain { background-size: contain; }
+.size-cover   { background-size: cover; }
+
+/*
+  Блок «Прокручування фону».
+  scroll: фон прикріплений до самого блоку і не рухається, коли ми
+  прокручуємо вміст усередині блоку.
+  local: фон прикріплений до вмісту блоку і прокручується разом з ним.
+*/
+.scrolling {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 300px;
+    max-height: 150px;
+    overflow: auto;
+    margin-right: 20px;
+    background-image: url('../img/a.jpg');
+    background-size: 120px;
+}
+
+.att-scroll { background-attachment: scroll; }
+.att-local  { background-attachment: local; }

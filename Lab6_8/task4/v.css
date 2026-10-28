@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+}
+
+/* фіксована панель на повну висоту */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    background-color: #1f2a44;
+    z-index: 100;
+}
+
+.sidemenu,
+.sidemenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidemenu li {
+    position: relative;
+}
+
+.sidemenu a {
+    display: block;
+    padding: 14px 16px;
+    color: #cfd8ee;
+    text-decoration: none;
+}
+
+.sidemenu > li > a .material-icons {
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+/* активний пункт */
+.sidemenu li.active > a {
+    background-color: #2b3a5c;
+    box-shadow: inset 4px 0 0 #ffd166;
+    color: white;
+}
+
+/* наведення */
+.sidemenu li:hover > a {
+    background-color: #3f5ba9;
+    color: white;
+}
+
+/* вкладені рівні (2-й і 3-й) випадають праворуч */
+.sidemenu ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: #2b3a5c;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidemenu li:hover > ul {
+    display: block;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px 30px;
+}

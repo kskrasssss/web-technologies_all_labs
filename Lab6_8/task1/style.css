@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 520px;
+    height: 320px;
+    margin: 20px;
+}
+
+.block {
+    position: absolute;
+    box-sizing: border-box;
+    border: 3px solid #333;
+    color: white;
+    font-size: 22px;
+    background-color: #518ed6;
+}
+
+/* друга рядок тексту зсунутий вправо (висяче відступлення) */
+.block-1 {
+    left: 8px;
+    top: 6px;
+    width: 232px;
+    height: 172px;
+    z-index: 1;
+    padding: 10px 10px 10px 70px;
+    text-indent: -60px;
+}
+
+.block-2 {
+    left: 262px;
+    top: 6px;
+    width: 244px;
+    height: 172px;
+    z-index: 2;
+    padding: 10px 10px 10px 75px;
+    text-indent: -60px;
+}
+
+.block-3 {
+    left: 8px;
+    top: 200px;
+    width: 498px;
+    height: 115px;
+    z-index: 3;
+    padding: 15px 20px 15px 100px;
+    background-color: #614a7e;
+}

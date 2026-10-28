@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 200px;
+    margin: 30px;
+}
+
+.block {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    text-align: center;
+    font-size: 16px;
+}
+
+.block-1 {
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 40px;
+    line-height: 36px;
+    background-color: #00b050;
+    color: #000;
+}
+
+.block-2 {
+    left: 130px;
+    top: 0;
+    width: 260px;
+    height: 40px;
+    line-height: 36px;
+    background-color: #518ed6;
+    color: white;
+}
+
+.block-3 {
+    left: 130px;
+    top: 50px;
+    width: 260px;
+    height: 110px;
+    padding-top: 10px;
+    background-color: #614a7e;
+    color: white;
+}
+
+/* початково Блок 2 і Блок 3 приховані, але місце за ними зберігається */
+.block-2,
+.block-3 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease 0.3s, visibility 0s linear 0.3s;
+}
+
+/* Блок 1 -> з'являється Блок 2 (комбінатор сусіднього елемента) */
+.block-1:hover + .block-2,
+.block-2:hover,
+/* Блок 2 -> з'являється Блок 3 */
+.block-2:hover + .block-3,
+.block-3:hover,
+/* Блок 2 лишається видимим, поки курсор на Блоці 3 */
+.block-2:has(+ .block-3:hover) {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}

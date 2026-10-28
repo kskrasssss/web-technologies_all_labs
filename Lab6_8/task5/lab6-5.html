@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тінь, прозорість, відображення</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Тінь, прозорість та відображення</h1>
+
+    <h2>box-shadow</h2>
+    <div class="card card-soft">Легка тінь</div>
+    <div class="card card-hard">Різка тінь</div>
+    <div class="card card-inset">Внутрішня тінь</div>
+
+    <h2>opacity</h2>
+    <div class="swatch o-100">1</div>
+    <div class="swatch o-70">0.7</div>
+    <div class="swatch o-40">0.4</div>
+    <div class="swatch o-10">0.1</div>
+
+    <h2>display і visibility</h2>
+    <div class="row">
+        <div class="tile">Блок A</div>
+        <div class="tile tile-visibility">visibility: hidden (місце зберігається)</div>
+        <div class="tile">Блок B</div>
+        <div class="tile tile-none">display: none</div>
+        <div class="tile">Блок C</div>
+    </div>
+
+    <h2>position і z-index</h2>
+    <div class="stack">
+        <div class="layer layer-1">z-index: 1</div>
+        <div class="layer layer-2">z-index: 3</div>
+        <div class="layer layer-3">z-index: 2</div>
+    </div>
+</body>
+</html>

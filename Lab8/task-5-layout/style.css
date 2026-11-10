@@ -1,0 +1,104 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --border-color: #ef4444;
+  --bg-color: #ffffff;
+  --gap: 12px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  padding: 16px;
+  color: #333;
+}
+
+.block {
+  border: 2px solid var(--border-color);
+  padding: 12px;
+  font-size: 12px;
+  background-color: #ffffff;
+}
+
+/* Base Mobile First (Common Layout) */
+.layout {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   Спосіб 1: Column Grids + Rows
+   ========================================= */
+@media (min-width: 768px) {
+  .layout--grid {
+    grid-template-columns: 180px 1fr;
+  }
+  
+  .layout--grid .header { grid-column: 1 / -1; }
+  .layout--grid .navigation { grid-column: 1 / -1; }
+  .layout--grid .sidebar { grid-column: 1; grid-row: 3 / 5; }
+  .layout--grid .main { grid-column: 2; }
+  .layout--grid .ads { grid-column: 1; }
+  .layout--grid .footer { grid-column: 2; }
+}
+
+@media (min-width: 1024px) {
+  .layout--grid {
+    grid-template-columns: 180px 1fr 140px;
+  }
+
+  .layout--grid .header { grid-column: 1 / -1; }
+  .layout--grid .sidebar { grid-column: 1; grid-row: 2 / 4; }
+  .layout--grid .navigation { grid-column: 2; grid-row: 2; }
+  .layout--grid .main { grid-column: 2; grid-row: 3; }
+  .layout--grid .ads { grid-column: 3; grid-row: 2 / 4; }
+  .layout--grid .footer { grid-column: 1 / -1; grid-row: 4; }
+}
+
+/* =========================================
+   Спосіб 2: Grid Template Areas
+   ========================================= */
+.layout--areas {
+  grid-template-areas:
+    "header"
+    "navigation"
+    "main"
+    "sidebar"
+    "ads"
+    "footer";
+}
+
+.layout--areas .header     { grid-area: header; }
+.layout--areas .navigation { grid-area: navigation; }
+.layout--areas .main       { grid-area: main; }
+.layout--areas .sidebar    { grid-area: sidebar; }
+.layout--areas .ads        { grid-area: ads; }
+.layout--areas .footer     { grid-area: footer; }
+
+@media (min-width: 768px) {
+  .layout--areas {
+    grid-template-columns: 180px 1fr;
+    grid-template-areas:
+      "header     header"
+      "navigation navigation"
+      "sidebar    main"
+      "sidebar    footer"
+      "ads        footer";
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout--areas {
+    grid-template-columns: 180px 1fr 140px;
+    grid-template-areas:
+      "header  header     header"
+      "sidebar navigation ads"
+      "sidebar main       ads"
+      "footer  footer     footer";
+  }
+}

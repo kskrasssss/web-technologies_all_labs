@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-yellow: #facc15;
+  --gap: 8px;
+}
+
+body {
+  background-color: #1e1e1e;
+  padding: 20px;
+  counter-reset: block-counter;
+  display: flex;
+  justify-content: center;
+}
+
+.tree-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  width: 100%;
+  max-width: 900px;
+}
+
+.item {
+  background-color: var(--bg-yellow);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: block-counter;
+}
+
+.item::before {
+  content: counter(block-counter);
+  font-family: serif;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.item--lvl1 { grid-column: span 12; }
+.item--lvl2 { grid-column: span 6; }
+.item--lvl3 { grid-column: span 4; }
+.item--lvl4 { grid-column: span 3; }
+.item--lvl5 { grid-column: span 2; }
+.item--lvl6 { grid-column: span 1; }
